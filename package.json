@@ -1,0 +1,19 @@
+{
+  "name": "foodmaps1.0",
+  "version": "0.0.1",
+  "description": "food map",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "food"
+  ],
+  "author": "Ismary Salges",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "save-dev": "^2.0.0"
+  }
+}
