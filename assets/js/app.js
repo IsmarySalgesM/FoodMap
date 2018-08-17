@@ -1,4 +1,3 @@
-// Se ejecuta el call back de api google maps
 function initMap() {
   let map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: -33.4, lng: -70.6 },
@@ -40,13 +39,13 @@ function initMap() {
         return;
       }
 
-      // forma de comparar en una function
-      // funcion en linea
-      if (place.types.filter(x => x == "restaurant", "food").length == 0) {
-        alert("Por favor, solo introducir nombres de restaurant");
+    
+      if (place.types.filter(comida => comida == "restaurant", "food").length == 0
+      ) {
         return;
       }
 
+      placeD(place);
       console.log(place);
 
       let icon = {
