@@ -18,6 +18,6 @@ function placeD(site) {
   Foto: <img src='${site.photos[0].getUrl({
     maxWidth: 100,
     maxHeight: 100
-  })}'></img>
+  })}' ></img>
   </div>`;
 }

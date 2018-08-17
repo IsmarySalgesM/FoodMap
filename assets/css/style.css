@@ -2,7 +2,8 @@ h1{
   color: yellow;
   text-align: center;
   margin-top: 20%;
-  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  font-family: 'Jua',
+  sans-serif;
   font-size: 40px;
 }
 body{
@@ -34,7 +35,7 @@ text-align: center;
   margin-top: 10%;
 }
 
-#mapContainer{
-  width: 640px;
-  height: 480px;
+
+.img-fluid{
+border-bottom-color: brown;
 }
