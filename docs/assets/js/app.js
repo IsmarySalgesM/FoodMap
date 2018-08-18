@@ -9,6 +9,7 @@ function initMap() {
 
   // Create the search box and link it to the UI element.
   let input = document.getElementById("inputSearch");
+    input.value = "";
 
   let searchBox = new google.maps.places.SearchBox(input);
 
