@@ -5,22 +5,21 @@ function initMap() {
     mapTypeId: "roadmap",
     radius: "500"
   });
-  let infoWindow = new google.maps.InfoWindow();
 
+  let infoWindow = new google.maps.InfoWindow();
   // Create the search box and link it to the UI element.
   let input = document.getElementById("inputSearch");
-    input.value = "";
-
   let searchBox = new google.maps.places.SearchBox(input);
-
-  map.addListener("bounds_changed", function() {
+  map.addListener("bounds_changed", function () {
     searchBox.setBounds(map.getBounds());
   });
+
 
   let markers = [];
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
-  searchBox.addListener("places_changed", function() {
+
+  searchBox.addListener("places_changed", function () {
     let places = searchBox.getPlaces();
 
     if (places.length == 0) {
@@ -28,26 +27,26 @@ function initMap() {
     }
 
     // Clear out the old markers.
-    markers.forEach(function(marker) {
+    markers.forEach(function (marker) {
       marker.setMap(null);
     });
     markers = [];
 
     // For each place, get the icon, name and location.
     let bounds = new google.maps.LatLngBounds();
-    places.forEach(function(place) {
+    places.forEach(function (place) {
       if (!place.geometry) {
         return;
       }
 
-    
+
       if (place.types.filter(comida => comida == "restaurant", "food").length == 0
       ) {
         return;
       }
 
       placeD(place);
-      console.log(place);
+      // console.log(place);
 
       let icon = {
         url: place.icon,
@@ -78,7 +77,7 @@ function initMap() {
   });
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
-      function(position) {
+      function (position) {
         let pos = {
           lat: position.coords.latitude,
           lng: position.coords.longitude
@@ -90,7 +89,7 @@ function initMap() {
         map.setCenter(pos);
       },
 
-      function() {
+      function () {
         handleLocationError(true, infoWindow, map.getCenter());
       }
     );

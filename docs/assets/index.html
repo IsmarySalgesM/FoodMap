@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  
+
   <!-- Primer sección -->
   <section id="firstSection">
     <div class="container-fluid">
@@ -23,14 +23,18 @@
         <div class="col-sm">
         </div>
         <div class="col-sm">
-          <div>
-            <h1 class="text-center">FOOD MAP
-              <i class="fas fa-feather"></i>
-            </h1>
-          </div>
-          <div class="text-center img">
-            <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid"
-              alt="Responsive image">
+          <div class="text-center fluidImg">
+            <div class="container">
+              <div class="avatar">
+                <img src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?cs=srgb&dl=background-berries-blueberries-1092730.jpg&fm=jpg" class="img-fluid"
+                  alt="Responsive image">
+              </div>
+              <div id="title">
+                <h1 class="text-center">FOOD MAP 
+                  <i class="fas fa-utensils"></i>
+                </h1>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-sm">
@@ -46,14 +50,12 @@
         <div class="col-sm">
         </div>
         <div class="col-sm">
-
           <div>
-            <h1 class="text-center">FOOD MAP
-              <i class="fas fa-feather"></i>
+            <h1 class="text-center secondTittle">FOOD MAP
+                <i class="fas fa-utensils"></i>
             </h1>
           </div>
-
-          <div  id="map" >
+          <div id="map">
           </div>
           <div>
             <div class="input-group input-group-sm mb-3">
@@ -65,14 +67,30 @@
           </div>
 
           <!-- Modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+          </button>
 
-          
-          <div id="containerInfo">
 
+          <!-- Modal -->
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="custom-select" id="containerInfo">
+            </select>
+          </div>
+
+          <div class="placeholder">
 
           </div>
 
-          
+
+
+
+
+
         </div>
         <div class="col-sm">
         </div>
@@ -81,8 +99,12 @@
     </div>
   </section>
 
+
+
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
@@ -91,6 +113,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqS5BO0_6c3hznvSDEgn1sxHSi996EiB0&libraries=places&callback=initMap"></script>
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/app.js"></script>
+
 </body>
 
 </html>
