@@ -12,32 +12,31 @@ window.onload = () => {
 function placeD(site) {
 
   //console.log(site);
+  // Aqui guardo toda mis opciones de restaurantes
   let prueba = []
   let datos = prueba.push(site)
 
-  //let total = pruebaSearch.push(`${site.name}`)
-  // console.log(prueba);
-  //let printPhoto = document.getElementById('pruebaPhoto');
+  //aqui recorro todas mis opciones
   let select = document.getElementById("containerInfo");
   for (let i = 0; i < prueba.length; i++) {
     select.options[select.options.length] = new Option(prueba[i].name)
-    console.log(prueba[i].name)
+    // console.log(prueba[i].name)
     //console.log(pruebaSearch);
-    let selectting = document.getElementById('containerInfo');
-    selectting.addEventListener('change',
-      function (e) {
-        e.target;
-        let selectedOption = this.options[selectting.selectedIndex]
-        for (let key in site) {
-          if(prueba[i].name == site.name){
-            let tony = site.formatted_address
-           // console.log(tony)
-            }
-          }
-        })
+  }
+  //aqui es la funcion de mi select
+  select.addEventListener('change',function (event) {
+      console.log(event)
+      let selectedOption = this.options[select.selectedIndex]
+      
+      for (let key in site) {
+        // solo tomo el valor de la direcciones
+        let directionAddress = site.formatted_address
+        //console.log(directionAddress);
       }
     }
-   
+  )
+}
+
            // let tony = site.formatted_address;
             //console.log(tony);
          // }
@@ -45,7 +44,7 @@ function placeD(site) {
           //console.log(key);
          // if (site.hasOwnProperty(key)) {
           //  const element = site.formatted_address;
-     
+
 
     //console.log(selectedOption.text);
 
